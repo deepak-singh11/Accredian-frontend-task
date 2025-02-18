@@ -180,7 +180,7 @@ function ReferForm({closeModalBtn}) {
 
   const submitForm=async(data)=>{
     console.log(data);
-    const response= await axios.post("http://localhost:3000/referral-form",data);
+    const response= await axios.post(`${import.meta.env.VITE_API_URL}/referral-form`,data);
     console.log("response is: ",response.data);
     closeModalBtn();
   }
